@@ -10,11 +10,16 @@
 # 输入：'abefd'
 # 输出：'abefd
 class Solution:
-    def repeatString(self, s: str) -> str:
-        lenth = len(s)
-        for i in range(1,lenth//2+1):
-            if lenth % i == 0 and s[:i] * (lenth//i) == s:
+    
+    def patternRepeatedSubstring(self, s: str) -> str:
+    
+        length = len(s)
+        
+        # 遍历从1到字符串一半的长度
+        for i in range(1, length // 2 + 1):
+            # 如果当前长度可以整除字符串总长度，并且当前子串重复可以构成整个字符串
+            if length % i == 0 and s[:i] * (length // i) == s:
                 return s[:i]
-            return s
         
-        
+        # 如果没有符合的子串，返回整个字符串
+        return s
