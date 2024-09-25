@@ -73,9 +73,9 @@ class Solution:
         # 将两个数据以1对8的映射放入字典
         details_per_name = len(processed_td_text) // len(p_name)
         data_dict = {
-            p_name[i]: processed_td_text[i * details_per_name: (i + 1) * details_per_name]
+            p_name[i]: processed_td_text[i * details_per_name : (i + 1) * details_per_name]
             for i in range(len(p_name))
-        }
+        } # 此处存储数据的方法：字典推导式和嵌套切片
 
         # 遍历字典，判断是否满足条件
         for fname,details in data_dict.items():
@@ -89,5 +89,4 @@ class Solution:
 
          
         pass  
- 
-       # 测试代码
+      
