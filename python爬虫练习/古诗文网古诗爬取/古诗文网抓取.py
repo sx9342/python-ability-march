@@ -22,3 +22,4 @@ text_content = contson.get_text(strip=True)
 with open("送宗判官归滑台序.txt","w",encoding='utf-8') as file:
     file.write(tittle.text)
     file.write(text_content)
+

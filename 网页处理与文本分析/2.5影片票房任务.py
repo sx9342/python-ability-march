@@ -12,7 +12,7 @@ class Solution:
         resp.encoding = 'utf-8'
 
         #初始化结果数组
-        #results = [0,0.00,0.00] #按照[int,float,float]初始化，即上映天数，综合票房（万元），排片占比
+        
         # 数据处理
         soup = BeautifulSoup(resp.text, 'html.parser')
         moive = soup.find_all('div',{'class': 'name-wrap'})#拿到电影名称的Html
@@ -76,9 +76,3 @@ class Solution:
         for fname,fvalue in moive_all.items():
             if moive_name == fname:
                 return fvalue
-                
-        print(moive_all)
-        
-                        
-#Solution().BoxOfficeSpider()   
- 
