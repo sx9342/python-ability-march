@@ -80,5 +80,5 @@ class Solution:
         print(moive_all)
         
                         
-#Solution().BoxOfficeSpider()   
+ 
  
